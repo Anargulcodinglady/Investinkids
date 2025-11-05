@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Invest in Kids | Educational Center Astana</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+  body { background: #f9f9f9; color: #222; overflow-x: hidden; }
+
+  header {
+    width: 100%;
+    background: linear-gradient(90deg, #1b5e20, #43a047);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.3s;
+  }
+
+  header h1 { font-size: 26px; font-weight: 700; }
+  nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+  nav a:hover { color: #c8e6c9; }
+
+  /* Carousel */
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    animation: slide 20s infinite;
+  }
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    text-align: center;
+  }
+  .slide h2 { font-size: 48px; animation: fadeIn 2s ease-in; }
+  .slide p { font-size: 18px; margin-top: 10px; animation: fadeIn 3s ease-in; }
+
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+  }
+
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  .btn {
+    background-color: #43a047;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn:hover { background-color: #2e7d32; transform: scale(1.05); }
+
+  .section { padding: 60px 10%; text-align: center; }
+  .section h3 { color: #1b5e20; font-size: 32px; margin-bottom: 25px; }
+
+  .programs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  .program {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 280px;
+    padding: 25px;
+    transition: transform 0.4s;
+  }
+  .program:hover { transform: translateY(-10px); }
+  .program h4 { color: #2e7d32; margin-bottom: 10px; }
+
+  .highlight {
+    background-color: #e8f5e9;
+    border-left: 5px solid #1b5e20;
+    padding: 20px;
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 8px;
+  }
+
+  footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  footer a { color: #a5d6a7; margin: 0 10px; text-decoration: none; }
+  .social { margin-top: 15px; }
+  .social a { font-size: 22px; margin: 0 10px; color: white; transition: color 0.3s ease; }
+  .social a:hover { color: #a5d6a7; }
+
+  /* Floating WhatsApp */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: 0.3s;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); background-color: #1ebd5a; }
+
+  @media (max-width: 768px) {
+    .slide h2 { font-size: 32px; }
+    .slide p { font-size: 16px; }
+    .program { width: 100%; }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Invest in Kids</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#programs">Programs</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Carousel Section -->
+<section class="carousel" id="home">
+  <div class="slides">
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1470&q=80');">
+      <h2>🎓 IELTS & English</h2>
+      <p>Boost your confidence and reach Band 8.0+ with native teachers.</p>
+      <a href="https://wa.me/77001234567" target="_blank"><button class="btn">Book Free Trial Lesson</button></a>
+    </div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600195077075-1b3bb98e48f1?auto=format&fit=crop&w=1470&q=80');">
+      <h2>📘 SAT Preparation</h2>
+      <p>Master Math & Reading with personalized learning paths.</p>
+      <a href="https://wa.me/77001234567" target="_blank"><button class="btn">Join Now</button></a>
+    </div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1470&q=80');">
+      <h2>💻 Programming in English</h2>
+      <p>Learn Python, AI & Web Development in English-based environment.</p>
+      <a href="https://wa.me/77001234567" target="_blank"><button class="btn">Start Learning</button></a>
+    </div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80');">
+      <h2>🤖 Robotics & AI</h2>
+      <p>Explore technology through creativity and hands-on projects.</p>
+      <a href="https://wa.me/77001234567" target="_blank"><button class="btn">Explore AI</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Programs -->
+<section class="section" id="programs">
+  <h3>Our Programs</h3>
+  <div class="programs">
+    <div class="program"><h4>IELTS & English</h4><p>Achieve high scores with interactive lessons and mock tests.</p></div>
+    <div class="program"><h4>SAT Preparation</h4><p>Personalized math, reading, and writing courses for top universities.</p></div>
+    <div class="program"><h4>Programming in English</h4><p>Learn coding and English simultaneously to prepare for tech careers.</p></div>
+    <div class="program"><h4>AI & Robotics</h4><p>Build, code, and innovate with fun and practical STEM lessons.</p></div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+  <h3>Pricing Plans</h3>
+  <div class="highlight">
+    <p><strong>🔥 40% OFF</strong> until <b>November 15, 2025</b>!</p>
+    <p>✅ 24 lessons per month</p>
+    <p>✅ 12 lessons with native speakers</p>
+    <p>🎁 Free trip to Turkey for top-performing students</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <h3>Contact Us</h3>
+  <p>📍 Address: <a href="https://2gis.kz/astana/search/invest%20in%20kids/firm/70000001087013430/71.367411%2C51.130224?m=71.367411%2C51.130224%2F13.01" target="_blank">Syganak Street, Astana, Kazakhstan</a></p>
+  <p>📞 Phone: +7 (700) 365-00-00</p>
+  <p>✉️ Email: info@investinkids.kz</p>
+  <a href="https://wa.me/77001234567" target="_blank"><button class="btn">Chat on WhatsApp</button></a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Invest in Kids | Empowering Education in Kazakhstan</p>
+  <div class="social">
+    <a href="https://instagram.com/investinkids" target="_blank">📷</a>
+    <a href="https://t.me/investinkids" target="_blank">💬</a>
+    <a href="https://wa.me/77001234567" target="_blank">💚</a>
+    <a href="https://facebook.com/investinkids" target="_blank">📘</a>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/77001234567" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">💬</a>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('header').style.boxShadow = window.scrollY > 50 ? '0 2px 10px rgba(0,0,0,0.2)' : 'none';
+  });
+</script>
+
+</body>
+</html>
